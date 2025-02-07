@@ -1,0 +1,93 @@
+:root{
+    --borderRad: 25px;
+    --levelPad: 25px;
+    --oneLevelColor: bisque;
+    --twoLevelColor: burlywood;
+}
+
+*{
+    font-family:monospace;
+}
+
+body{
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.one-level{
+    background-color: var(--oneLevelColor);
+    border-radius: var(--borderRad);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--levelPad);
+    margin: 25px;
+}
+
+.card{
+    margin: 25px;
+    width: 90%;
+    background-color: var(--twoLevelColor);
+    display: flex;
+    align-items: center;
+    border-radius: var(--borderRad);
+    padding: var(--levelPad);
+}
+
+.card img{
+    border-radius: var(--borderRad);
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.card div{
+    width: 400px;
+    height: 100%;
+    margin: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+#profile{
+    flex-direction: column;
+}
+
+#profile-image{
+    border-radius: 250px;
+    width: 250px;
+    height: 250px;
+    content: url("https://th.bing.com/th/id/OIP.CpgL4Xscnv-1kKONYPpaHQHaEK?rs=1&pid=ImgDetMain");
+    object-fit: cover;
+}
+
+#other{
+    flex-direction: column;
+    width: 60%;
+}
+
+#links{
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#links a{
+    background-color: var(--twoLevelColor);
+    border-radius: var(--borderRad);
+    margin: 10px;
+    padding: 10px;
+}
+
+#links img{
+    width: 100px;
+    height: 100px;
+    border-radius: var(--borderRad);
+    object-fit: contain;
+}
