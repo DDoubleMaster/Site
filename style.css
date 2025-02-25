@@ -3,10 +3,13 @@
     --levelPad: 25px;
     --oneLevelColor: bisque;
     --twoLevelColor: burlywood;
+    --oneLevelBlackColor: #444;
+    --twoLevelBlackColor: #555;
 }
 
 *{
     font-family:monospace;
+    transition: 0.1s;
 }
 
 body{
@@ -15,6 +18,64 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+body.dark-theme {
+    background-color: #333;
+    color: #fff;
+}
+
+header{
+    background-color: var(--oneLevelColor);
+    border-radius: var(--borderRad);
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--levelPad);
+    margin: 25px;
+}
+
+body.dark-theme header {
+    background-color: var(--oneLevelBlackColor);
+    color: white;
+}
+
+header nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+}
+
+header nav a{
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+}
+
+body.black-theme header nav a{
+    color: white;
+}
+
+.invisible-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+}
+
+#theme{
+    width: 50px;
+    height: 50px;
+    content: url("./White_Theme.png");
+}
+
+body.dark-theme #theme{
+    width: 50px;
+    height: 50px;
+    content: url("./Dark_Theme.png");
 }
 
 .one-level{
@@ -27,6 +88,10 @@ body{
     margin: 25px;
 }
 
+body.dark-theme .one-level {
+    background-color: var(--oneLevelBlackColor);
+}
+
 .card{
     margin: 25px;
     width: 90%;
@@ -35,6 +100,10 @@ body{
     align-items: center;
     border-radius: var(--borderRad);
     padding: var(--levelPad);
+}
+
+body.dark-theme .card {
+    background-color: var(--twoLevelBlackColor);
 }
 
 .card img{
@@ -83,6 +152,10 @@ body{
     border-radius: var(--borderRad);
     margin: 10px;
     padding: 10px;
+}
+
+body.dark-theme #links a {
+    background-color: var(--twoLevelBlackColor);
 }
 
 #links img{
