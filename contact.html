@@ -17,5 +17,50 @@
         </nav>
         <button onclick="SwitchTheme()" class="invisible-button"><img src="" alt="" id="theme"></button>
     </header>
+
+    <div id="contact">
+        <div>
+            <a href="https://github.com/DDoubleMaster" class="one-level" id="mini-link">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/120px-Octicons-mark-github.svg.png" alt="">
+            </a>
+            <a href="mailto:DDoubleMaster@outlook.com" class="one-level" id="mini-link">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Microsoft_Outlook_new_logo.svg/150px-Microsoft_Outlook_new_logo.svg.png" alt="">
+            </a>
+            <a href="https://t.me/Chyngyzman" class="one-level" id="mini-link">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/120px-Telegram_logo.svg.png" alt="">
+            </a>
+        </div>
+        <form class="one-level" id="contactForm">
+            <div>
+                <label for="subject">Subject:</label>
+                <input class="contact-form-input" type="text" id="subject" required>
+            </div>
+            
+            <div>
+                <label for="message">Message:</label>
+                <textarea class="contact-form-input" id="message" required></textarea>
+            </div>
+            
+            <button>Submit</button>
+        </form>
+        <script>
+            document.getElementById("contactForm").addEventListener("submit", function(event) {
+                event.preventDefault();
+                
+                let subject = document.getElementById("subject").value;
+                document.getElementById("subject").value = null;
+                let message = document.getElementById("message").value;
+                document.getElementById("message").value = null;
+
+                let link = "mailto:DDoubleMaster@outlook.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(message);
+                window.location.href = link;
+            });
+        </script>
+    </div>
+    <footer>
+        <p>DDoubleMaster</p>
+        <div style="width: 50px;"></div>
+        <p>© <b id="year">2021</b> Chika</p>
+    </footer>
 </body>
 </html>
